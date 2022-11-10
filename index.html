@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Mandiri 11</title>
+</head>
+<body>
+    <!-- program mouse event -->
+<h1 id="demo" OnMouseOver ="mouseOver()" OnMouseOut="mouseOut()">Bunglon</h1>
+
+<!-- program keyboard event -->
+<button onclick="hello()">Hello</button>
+  <button id="hello-aslanbey">Hello Aslanbey</button>
+<hr>
+  <!-- program event change -->
+  <div id="info"></div>
+  <label for="buah">Pilih Buah</label>
+  <select name="buah" id="buah">
+    <option>Apel</option>
+    <option>Mangga</option>
+    <option>Jeruk</option>
+  </select>
+</body>
+<script>
+
+    // program mouse event
+    function mouseOver() {
+  document.getElementById("demo").style.color = "red";
+}
+function mouseOut() {
+  document.getElementById("demo").style.color = "black";
+}
+
+// program keyboard event
+function hello(){
+      alert("Hayoo Ngapain :v");
+    }
+
+    const btnLogin = document.getElementById("hello-aslanbey");
+    btnLogin.addEventListener("click", function(){
+      alert("Iya kenapa? pengen cerita?");
+    });
+
+    // program event change
+    const buah = document.getElementById('buah');
+  const info = document.getElementById('info');
+
+  buah.addEventListener('change', function(e){
+    info.innerText = `Anda memilih: ${e.target.value}`;
+  });
+</script>
+</html>
